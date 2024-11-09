@@ -1,5 +1,5 @@
 <main>
-  <app-learning-resources />
+  <app-learning-resources appLog />
 
   <hr />
 
@@ -14,7 +14,7 @@
     <p>Only Admin should see</p>
   </ng-template> -->
   <!-- OR -->
-  <p *appAuth="'admin'" class="protected-content admin">Only Admin should see</p>
+  <p *appAuth="'admin'" appLog class="protected-content admin">Only Admin should see</p>
   <p *appAuth="'user'" class="protected-content unauthenticated">Regular Users should see</p>
   <p *appAuth="'guest'" class="protected-content authenticated">Guest Admin should see</p>
 </main>
