@@ -10,7 +10,11 @@
   @else if (isUser()) {
     <p>User this side! </p>
   } -->
-
-  <p *ngIf="isAdmin()">Only Admin should see</p>
- 
+  <!-- <ng-template appAuth="admin">
+    <p>Only Admin should see</p>
+  </ng-template> -->
+  <!-- OR -->
+  <p *appAuth="'admin'" class="protected-content admin">Only Admin should see</p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">Regular Users should see</p>
+  <p *appAuth="'guest'" class="protected-content authenticated">Guest Admin should see</p>
 </main>
